@@ -1,0 +1,19 @@
+{
+  "name": "discord-widget.js",
+  "version": "0.9.0",
+  "description": "Dependency-free wpromise wrapper for Discord's widget API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "discord",
+    "widget",
+    "javascript",
+    "api",
+    "wrapper",
+    "promise"
+  ],
+  "author": "yanko",
+  "license": "Apache-2.0"
+}

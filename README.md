@@ -1,5 +1,10 @@
-# discord-widget.js
-Promise-Based wrapper for Discord's widget API with minimal dependencies.
+# About
+discord-widget.js is Promise-Based wrapper for Discord's widget API with minimal dependencies.
+
+# Installation
+```sh
+npm i discord-widget.js
+```
 
 # Usage
 ```js

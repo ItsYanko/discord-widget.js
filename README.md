@@ -7,7 +7,7 @@ discord-widget.js is Promise-Based wrapper for Discord's widget API with minimal
 npm i discord-widget.js
 ```
 
-# Usage
+# Basic Usage
 ```js
 const w = require("discord-widget.js");
 (async() => {
@@ -19,5 +19,5 @@ const w = require("discord-widget.js");
   }
 })();
 ```
-# Coming Soon!
-In future versions a more detailed documentation will come. For the time being, this package has JSDoc comments. If your IDE has IntelliSense, it will help a lot
+# Documentation
+The JSDoc documentation can be found [here](https://itsyanko.github.io/discord-widget.js/) (still a work in progress)

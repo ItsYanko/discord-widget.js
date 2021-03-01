@@ -11,7 +11,7 @@ npm i discord-widget.js
 const w = require("discord-widget.js");
 (async() => {
   try{
-    let myWidget = await new Widget("GUILD_ID");
+    let myWidget = await new w.Widget("GUILD_ID");
     console.log(myWidget.name);
   }catch(e){
     console.error(e.message);

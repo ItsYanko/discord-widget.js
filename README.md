@@ -20,4 +20,4 @@ const w = require("discord-widget.js");
 })();
 ```
 # Documentation
-The JSDoc documentation can be found [here](https://itsyanko.github.io/discord-widget.js/) (still a work in progress)
+The JSDoc documentation can be found [here](https://pkg.discord-widget.ml/) (still a work in progress)

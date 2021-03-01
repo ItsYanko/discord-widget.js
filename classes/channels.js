@@ -1,7 +1,7 @@
 'use strict';
 
 const constants = require("../constants");
-const { Channel } = require("./classes");
+const Channel = require("./channel");
 
 module.exports = class Channels {
     #channels = [];
@@ -24,14 +24,14 @@ module.exports = class Channels {
         if (!input)
             throw new Error("At least 1 channel is required.");
 
-        if (input instanceof channel)
+        if (input instanceof Channel)
             channels = [input];
         else if (Array.isArray(input))
             if (input.length === 2 && input.filter(e => { return typeof e === 'string' }).length === input.length)
                 channels = [input]; // Array of ID/name pair
             else if (input.filter(e => { return e.length === 2 && e.filter(e => { return typeof e === 'string' }).length === e.length }).length === input.length)
                 channels = input; // Array of Array of ID/name pair
-            else if (input.filter(e => { return e instanceof channel }).length === input.length)
+            else if (input.filter(e => { return e instanceof Channel }).length === input.length)
                 channels = input; // Array of channel instances
             else
                 throw new Error("Input type is invalid.");
@@ -64,4 +64,13 @@ module.exports = class Channels {
     get IDList() {
         return this.#channels.map(function (ch) { return ch.id; });
     }
+
+    /**
+     * Amount of channels
+     * @returns {Number}
+     */
+    get length() {
+        return this.#channels.length;
+    }
+
 }

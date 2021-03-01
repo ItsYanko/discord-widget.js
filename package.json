@@ -15,5 +15,8 @@
     "promise"
   ],
   "author": "yanko",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
 }

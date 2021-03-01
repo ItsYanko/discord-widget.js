@@ -20,7 +20,7 @@ module.exports = class Channel {
         if (!ID || !name)
             throw new Error("No ID or Name provided");
 
-        if (!/^[0-9]*$/.test(v[0]))
+        if (!/^[0-9]*$/.test(ID))
             throw new Error("Invalid channelID provided");
 
         this.#data.id = ID;

@@ -1,6 +1,17 @@
 'use strict';
 
-module.exports = class User {
+/**
+ * User instance
+ * @class
+ * @name User
+ * @param {String} username Username
+ * @param {String} discriminator XXXX without #
+ * @param {String} avatar Avatar URL
+ * @param {('online'|'away'|'dnd'|'offline')} status User status
+ * @param {{name: String}|Boolean} game Custom activity or false
+ * @returns {User}
+ */
+class User {
     /**
      * Internal data structure
      * @private
@@ -13,15 +24,6 @@ module.exports = class User {
         status: false,
         game: false
     }
-    /**
-     * User instance
-     * @param {String} username Username
-     * @param {String} discriminator XXXX without #
-     * @param {String} avatar Avatar URL
-     * @param {('online'|'away'|'dnd'|'offline')} status User status
-     * @param {{name: String}|Boolean} game Custom activity or false
-     * @returns {Channel}
-     */
     constructor(username, discriminator, avatar, status, game = false) {
         if (!username || !discriminator || !avatar || !status)
             throw new Error("Required parameter missing");
@@ -41,7 +43,7 @@ module.exports = class User {
     }
 
     /**
-     * Get all data as a object
+     * All data as a object
      * @returns {{username: String, discriminator: String, avatar: String, status: ('online'|'away'|'dnd'|'offline'), game: {name: String}}}
      */
     json() {
@@ -49,8 +51,8 @@ module.exports = class User {
     }
 
     /**
-     * Get full username (w/ discriminator)
-     * @returns {String}
+     * full username (w/ discriminator)
+     * @type {String}
      */
     get full() {
         if (!this.#data.username || !this.#data.discriminator)
@@ -58,23 +60,45 @@ module.exports = class User {
         return this.#data.username + this.#data.discriminator;
     }
 
+    /**
+     * Username
+     * @type {String}
+     */
     get username() {
         return this.#data.username;
     }
 
+    /**
+     * 4 digit discriminator
+     * @type {String}
+     */
     get discriminator() {
         return this.#data.discriminator;
     }
 
+    /**
+     * Avatar URL
+     * @type {String}
+     */
     get avatar() {
         return this.#data.avatar;
     }
 
+    /**
+     * User Status
+     * @type {('online'|'idle'|'dnd'|'offline')}
+     */
     get status() {
         return this.#data.status;
     }
 
+    /**
+     * Game object (or false)
+     * @type {Object|Boolean}
+     */
     get game() {
         return this.#data.game || false;
     }
 }
+
+module.exports = User;

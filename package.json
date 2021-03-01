@@ -4,7 +4,8 @@
   "description": "Promise-Based wrapper for Discord's widget API with minimal dependencies.",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "generate-docs": "node_modules/.bin/jsdoc --configure ./jsdoc.json --verbose"
   },
   "keywords": [
     "discord",
@@ -18,5 +19,9 @@
   "license": "Apache-2.0",
   "dependencies": {
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^3.0.8",
+    "jsdoc": "^3.6.6"
   }
 }

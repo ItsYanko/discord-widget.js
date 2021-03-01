@@ -1,6 +1,14 @@
 'use strict';
 
-module.exports = class Channel {
+/**
+ * Channel instance
+ * @class
+ * @name Channel
+ * @param {String} ID Channel ID
+ * @param {String} name Channel Name
+ * @returns {Channel}
+ */
+class Channel {
     /**
      * Internal data structure
      * @private
@@ -10,12 +18,6 @@ module.exports = class Channel {
         id: false,
         name: false
     }
-    /**
-     * Channel instance
-     * @param {String} ID Channel ID
-     * @param {String} name Channel Name
-     * @returns {Channel}
-     */
     constructor(ID, name) {
         if (!ID || !name)
             throw new Error("No ID or Name provided");
@@ -31,7 +33,7 @@ module.exports = class Channel {
 
     /**
      * Get guild ID
-     * @returns {String}
+     * @type {String}
      */
     get id(){
         return this.#data.id;
@@ -39,9 +41,11 @@ module.exports = class Channel {
 
     /**
      * Get guild name
-     * @returns {String}
+     * @type {String}
      */
     get name(){
         return this.#data.name;
     }
 }
+
+module.exports = Channel;

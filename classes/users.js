@@ -3,13 +3,16 @@
 const constants = require("../constants");
 const User = require("./user");
 
-module.exports = class Users {
+/** 
+ * Collection of User instances 
+ * @class
+ * @name Users
+ * @param {Array<String, String, String, String>|Array<Array<String, String, String, String>>|User|Array<User>} input IDs or instances of users
+ * @description Create a new instance of Users
+ * @returns {Users}
+ */
+class Users {
     #users = [];
-    /**
-     * Create a new instance of Users
-     * @param {Array<String, String, String, String>|Array<Array<String, String, String, String>>|User|Array<User>} input IDs or instances of users
-     * @returns {Users}
-     */
     constructor(input) {
         this.add(input);
         return this;
@@ -51,7 +54,7 @@ module.exports = class Users {
 
     /** 
      * Array of User instances
-     * @returns {Array<User>}
+     * @type {Array<User>}
     */
     get list() {
         return this.#users;
@@ -59,7 +62,7 @@ module.exports = class Users {
 
     /** 
      * Array of usernames
-     * @returns {Array<String>}
+     * @type {Array<String>}
     */
     get nameList() {
         return this.#users.map((usr) => { return usr.full; });
@@ -67,9 +70,11 @@ module.exports = class Users {
 
     /**
      * Amount of users
-     * @returns {Number}
+     * @type {Number}
      */
-    get length(){
+    get length() {
         return this.#users.length;
     }
 }
+
+module.exports = Users;

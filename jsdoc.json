@@ -1,0 +1,23 @@
+{
+    "source": {
+        "include": [
+            ""
+        ],
+        "includePattern": "class/*",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "opts": {
+        "encoding": "utf8",
+        "readme": "./README.md",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true,
+        "template": "./node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+            "theme": "dark"
+        }
+    }
+}

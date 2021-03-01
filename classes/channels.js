@@ -3,13 +3,15 @@
 const constants = require("../constants");
 const Channel = require("./channel");
 
-module.exports = class Channels {
+/**
+ * Create a new instance of Channels
+ * @class
+ * @name Channels
+ * @param {Array<String, String>|Array<Array<String, String>>|Channel|Array<Channel>} input IDs or instances of channels
+ * @returns {Channels}
+ */
+class Channels {
     #channels = [];
-    /**
-     * Create a new instance of Channels
-     * @param {Array<String, String>|Array<Array<String, String>>|Channel|Array<Channel>} input IDs or instances of channels
-     * @returns {Channels}
-     */
     constructor(input) {
         this.add(input);
         return this;
@@ -51,7 +53,7 @@ module.exports = class Channels {
 
     /** 
      * Array of Channel instances
-     * @returns {Array<Channel>}
+     * @type {Array<Channel>}
     */
     get list() {
         return this.#channels;
@@ -59,7 +61,7 @@ module.exports = class Channels {
 
     /** 
      * Array of Channel IDs
-     * @returns {Array<String>}
+     * @type {Array<String>}
     */
     get IDList() {
         return this.#channels.map(function (ch) { return ch.id; });
@@ -67,10 +69,12 @@ module.exports = class Channels {
 
     /**
      * Amount of channels
-     * @returns {Number}
+     * @type {Number}
      */
     get length() {
         return this.#channels.length;
     }
 
 }
+
+module.exports = Channels;

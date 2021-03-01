@@ -4,7 +4,15 @@ const constants = require('../constants');
 const Channels = require('./channels');
 const Users = require('./users');
 
-module.exports = class Widget {
+/**
+ * Widget instance
+ * @class 
+ * @name Widget
+ * @param {String} ID Guild ID
+ * @param {Function=} cb Optional callback
+ * @returns {Promise<Widget>}
+ */
+class Widget {
     /**
      * Internal data structure
      * @private
@@ -30,12 +38,6 @@ module.exports = class Widget {
             cachedAt: false
         }
     }
-    /**
-     * Widget instance
-     * @param {String} ID Guild ID
-     * @param {Function=} cb Optional callback
-     * @returns {Promise<Widget>}
-     */
     constructor(ID, cb = false) {
         return (async () => {
             this.#data.id = ID;
@@ -134,3 +136,5 @@ module.exports = class Widget {
         return this.#data.invite || false;
     }
 }
+
+module.exports = Widget;

@@ -5,6 +5,9 @@ const Channels = require("./channels");
 const User = require("./user");
 const Users = require("./users");
 
+/**
+ * @type {{Widget: Widget, Channel: Channel}}
+ */
 module.exports = {
     Widget,
     Channel,

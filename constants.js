@@ -9,5 +9,8 @@ module.exports = {
     },
     defaults: {
         name: "Unnamed Channel"
+    },
+    test: {
+        id: "793919117513850880"
     }
 }

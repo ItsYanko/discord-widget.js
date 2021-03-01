@@ -46,7 +46,7 @@ module.exports = class Channels {
             }
         })
 
-        this.#channels.push(channelInstances);
+        this.#channels.push(...channelInstances);
     }
 
     /** 

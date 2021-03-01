@@ -120,7 +120,7 @@ module.exports = class Widget {
         if (!this.#cache.__cacheinfo.cached)
             throw new Error("Data not cached!")
 
-        return this.name;
+        return this.#data.name;
     }
 
     /**

@@ -28,4 +28,20 @@ module.exports = class Channel {
 
         return this;
     }
+
+    /**
+     * Get guild ID
+     * @returns {String}
+     */
+    get id(){
+        return this.#data.id;
+    }
+
+    /**
+     * Get guild name
+     * @returns {String}
+     */
+    get name(){
+        return this.#data.name;
+    }
 }

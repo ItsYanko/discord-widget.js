@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "generate-docs": "node_modules/.bin/jsdoc --configure ./jsdoc.json --verbose"
+    "gen-docs": "node_modules/.bin/jsdoc --configure ./jsdoc.json --verbose"
   },
   "keywords": [
     "discord",
@@ -21,7 +21,7 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
-    "clean-jsdoc-theme": "^3.0.8",
+    "docdash": "^1.2.0",
     "jsdoc": "^3.6.6"
   }
 }

@@ -8,6 +8,13 @@ const Users = require('./users');
  * Widget instance
  * @class 
  * @name Widget
+ * @example const widgetInstance = await new Widget("GUILD_ID")
+ * @example 
+ * let widgetInstance
+ * new Widget("GUILD_ID", async (instance) => {
+ *   widgetInstance = instance;
+ *   // More actions
+ * })
  * @param {String} ID Guild ID
  * @param {Function=} cb Optional callback
  * @returns {Promise<Widget>}
@@ -50,7 +57,7 @@ class Widget {
     }
 
     /**
-     * Load from server and save to instance
+     * Load from server and save to instance. This is ran automatically when the constructor is called
      * @returns {Promise<Boolean>} Returns true or throws err
      */
     async fetch() {

@@ -19,5 +19,7 @@ const w = require("discord-widget.js");
   }
 })();
 ```
+**NOTE:** All _async_ class constructors (`new Something()`) should have a `try{}catch(e){}` block around them, as if any error occurs, it will be thrown
+
 # Documentation
 The JSDoc documentation can be found [here](https://pkg.discord-widget.ml/) (still a work in progress)

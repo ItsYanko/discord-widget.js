@@ -4,6 +4,7 @@
  * User instance
  * @class
  * @name User
+ * @example const userInstance = new User("USERNAME", "DISCRIMINATOR", "AVATAR", "STATUS")
  * @param {String} username Username
  * @param {String} discriminator XXXX without #
  * @param {String} avatar Avatar URL

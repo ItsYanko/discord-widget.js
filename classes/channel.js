@@ -4,6 +4,7 @@
  * Channel instance
  * @class
  * @name Channel
+ * @example const channelInstance = new Channel("CHANNEL_NAME", "CHANNEL_ID")
  * @param {String} ID Channel ID
  * @param {String} name Channel Name
  * @returns {Channel}

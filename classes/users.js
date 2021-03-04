@@ -6,6 +6,7 @@ const User = require("./user");
 /** 
  * Collection of User instances 
  * @class
+ * @example const usersInstance = new Users([["USERNAME", "DISCRIMINATOR", "AVATAR", "STATUS"], ...]);
  * @name Users
  * @param {Array<String, String, String, String>|Array<Array<String, String, String, String>>|User|Array<User>} input IDs or instances of users
  * @description Create a new instance of Users
@@ -20,6 +21,7 @@ class Users {
 
     /**
     * Add users to the instance
+    * @example usersInstance.add("USERNAME", "DISCRIMINATOR", "AVATAR", "STATUS")
     * @param {Array<String, String, String, String>|Array<Array<String, String, String, String>>|User|Array<User>} input IDs or instances of users
     */
     add(input) {

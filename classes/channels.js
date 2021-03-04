@@ -7,6 +7,7 @@ const Channel = require("./channel");
  * Create a new instance of Channels
  * @class
  * @name Channels
+ * @example const channelsInstance = new Channels([["CHANNEL_ID", "CHANNEL_NAME"], ["CHANNEL_NAME2", "CHANNEL_ID2"]]);
  * @param {Array<String, String>|Array<Array<String, String>>|Channel|Array<Channel>} input IDs or instances of channels
  * @returns {Channels}
  */
@@ -19,6 +20,7 @@ class Channels {
 
     /**
     * Add channels to the instance
+    * @example channelsInstance.add("GUILD_ID", "GUILD_NAME")
     * @param {Array<String, String>|Array<Array<String, String>>|Channel|Array<Channel>} input IDs or instances of channels
     */
     add(input) {

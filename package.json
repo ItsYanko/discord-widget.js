@@ -7,6 +7,10 @@
     "test": "node test.js",
     "gen-docs": "node_modules/.bin/jsdoc --configure ./jsdoc.json --verbose"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsYanko/discord-widget.js.git"
+  },
   "keywords": [
     "discord",
     "widget",
@@ -17,6 +21,10 @@
   ],
   "author": "yanko",
   "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ItsYanko/discord-widget.js/issues"
+  },
+  "homepage": "http://pkg.discord-widget.ml/",
   "dependencies": {
     "node-fetch": "^2.6.1"
   },
